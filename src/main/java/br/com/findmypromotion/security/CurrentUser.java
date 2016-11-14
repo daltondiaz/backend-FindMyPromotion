@@ -1,0 +1,33 @@
+package br.com.findmypromotion.security;
+
+import br.com.findmypromotion.domain.UserAdmin;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.security.core.userdetails.User;
+
+import java.util.Collection;
+
+/**
+ * Created by Dalton on 14/11/2016.
+ */
+public class CurrentUser extends User {
+
+
+    private UserAdmin user;
+
+    public CurrentUser(UserAdmin userAdmin) {
+        super(userAdmin.getEmail(), userAdmin.getPassword(), AuthorityUtils.createAuthorityList(userAdmin.getRole().toString()));
+    }
+
+    public UserAdmin getUser() {
+        return user;
+    }
+
+    public long getId(){
+        return user.getId();
+    }
+
+    public Role getRole(){
+        return user.getRole();
+    }
+}

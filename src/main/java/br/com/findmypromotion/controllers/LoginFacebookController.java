@@ -1,4 +1,4 @@
-package br.com.findmypromotion.Controllers;
+package br.com.findmypromotion.controllers;
 
 import org.springframework.social.connect.ConnectionRepository;
 import org.springframework.social.facebook.api.Facebook;
