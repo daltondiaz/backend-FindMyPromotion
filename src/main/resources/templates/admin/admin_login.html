@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Hello Facebook</title>
+</head>
+<body>
+<h3>Acesso Admin</h3>
+
+<form action="/admin/login" method="POST">
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
+    <input type="email" name="email" class="form-control" placeholder="Email"/>
+    <input type="password" name="password" class="form-control" placeholder="Password"/>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Entrar</button>
+       <!-- <a href="<spring:url value="/user/create" />" class="btn btn-success">Novo usuário</a>0-->
+    </div>
+</form>
+</body>
+</html>

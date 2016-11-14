@@ -24,8 +24,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.httpBasic().and().authorizeRequests()
-                .antMatchers("/connect/**").permitAll()
-                .anyRequest().authenticated().and().formLogin().loginPage("/admin/login")
+                .antMatchers("/connect/**","/admin/user/create").permitAll().and().csrf().disable()
+                .formLogin().loginPage("/admin/login")
+                .defaultSuccessUrl("/")
+                .usernameParameter("email")
                 .permitAll().and().logout();
 
     }

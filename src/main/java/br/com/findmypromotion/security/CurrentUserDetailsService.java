@@ -1,5 +1,6 @@
 package br.com.findmypromotion.security;
 
+import br.com.findmypromotion.domain.UserAdmin;
 import br.com.findmypromotion.service.implementation.UserAdminServiceImpl;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -22,6 +23,7 @@ public class CurrentUserDetailsService implements UserDetailsService{
 
     @Override
     public CurrentUser loadUserByUsername(String email) throws UsernameNotFoundException {
-        return new CurrentUser(userAdminService.findByEmail(email));
+        UserAdmin userAdmin = userAdminService.findByEmail(email);
+        return new CurrentUser(userAdmin);
     }
 }

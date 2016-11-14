@@ -1,2 +1,12 @@
-br\com\findmypromotion\Application.class
+br\com\findmypromotion\security\SecurityConfiguration.class
 br\com\findmypromotion\Controllers\LoginFacebookController.class
+br\com\findmypromotion\domain\UserAdmin.class
+br\com\findmypromotion\security\CurrentUser.class
+br\com\findmypromotion\security\CurrentUserDetailsService.class
+br\com\findmypromotion\security\SimpleCORSFilter.class
+br\com\findmypromotion\security\Role.class
+br\com\findmypromotion\service\implementation\UserAdminServiceImpl.class
+br\com\findmypromotion\Controllers\LoginAdmin.class
+br\com\findmypromotion\Application.class
+br\com\findmypromotion\repository\UserAdminRepository.class
+br\com\findmypromotion\service\Crud.class

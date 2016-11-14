@@ -10,6 +10,8 @@ import java.util.Collection;
 /**
  * Created by Dalton on 14/11/2016.
  */
+@Entity
+@Table(name="user_admin")
 public class UserAdmin implements UserDetails {
 
     @Id
@@ -69,12 +71,12 @@ public class UserAdmin implements UserDetails {
 
     @Override
     public String getPassword() {
-        return null;
+        return this.password;
     }
 
     @Override
     public String getUsername() {
-        return this.password;
+        return null;
     }
 
     @Override

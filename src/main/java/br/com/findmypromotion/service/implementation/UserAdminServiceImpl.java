@@ -5,6 +5,7 @@ import br.com.findmypromotion.repository.UserAdminRepository;
 import br.com.findmypromotion.service.Crud;
 import groovy.util.logging.Commons;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -44,9 +45,10 @@ public class UserAdminServiceImpl implements Crud<UserAdmin> {
     @Override
     public void saverOrUpdate(UserAdmin userAdmin) {
         try {
+            userAdmin.setPassword(new BCryptPasswordEncoder().encode(userAdmin.getPassword()));
             userAdminRepository.save(userAdmin);
         }catch (Exception e){
-
+            e.printStackTrace();
         }
     }
 
@@ -54,7 +56,7 @@ public class UserAdminServiceImpl implements Crud<UserAdmin> {
         try{
             return userAdminRepository.findUserAdminByEmail(email);
         }catch (Exception e){
-
+            e.printStackTrace();
         }
         return null;
     }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Novo Admin</title>
+</head>
+<body>
+<div class="container">
+    <div class="register-logo">
+        <h1 class="display-4">Novo Admin</h1>
+    </div>
+    <form method="POST" action="/admin/user/create" th:object="${user}" >
+        <div class="row">
+            <div class ="col-xs-6 col-xs-4">
+                <input id="name" th:field="*{userName}" type="text" placeholder="Nome" />
+            </div>
+        </div>
+        <div class="row">
+            <div class ="col-xs-6 col-xs-4">
+                <input id="email" type="email" th:field="*{email}" placeholder="E-mail"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class ="col-xs-6 col-xs-4">
+                <input id="password" th:field="*{password}" type="password" placeholder="Senha" />
+            </div>
+        </div>
+        <!--<div class="row">
+            <div class ="col-xs-6 col-xs-4">
+                <input id="passwordRepeated" path="passwordRepeated" cssClass="form-control col-xs-6 col-sm-4" placeholder="Confirmar Senha" />
+            </div>
+        </div>-->
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Criar</button>
+        </div>
+    </form>
+</div><!-- /.container -->
+</body>
+</html>

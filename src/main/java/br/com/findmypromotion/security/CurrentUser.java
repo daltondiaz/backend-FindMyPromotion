@@ -1,7 +1,6 @@
 package br.com.findmypromotion.security;
 
 import br.com.findmypromotion.domain.UserAdmin;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
 
@@ -17,10 +16,15 @@ public class CurrentUser extends User {
 
     public CurrentUser(UserAdmin userAdmin) {
         super(userAdmin.getEmail(), userAdmin.getPassword(), AuthorityUtils.createAuthorityList(userAdmin.getRole().toString()));
+        this.user = userAdmin;
     }
 
     public UserAdmin getUser() {
         return user;
+    }
+
+    public String getEmail(){
+        return this.user.getEmail();
     }
 
     public long getId(){
