@@ -16,7 +16,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
 @Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
-public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private UserDetailsService userDetailsService;
@@ -24,9 +24,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.httpBasic().and().authorizeRequests()
-                .antMatchers("/connect/**","/admin/user/create").permitAll().and().csrf().disable()
+                .antMatchers("/connect/**", "/admin/user/create")
+                .permitAll().and().csrf().disable()
                 .formLogin().loginPage("/admin/login")
-                .defaultSuccessUrl("/")
+                .defaultSuccessUrl("/admin/dashboard")
                 .usernameParameter("email")
                 .permitAll().and().logout();
 
