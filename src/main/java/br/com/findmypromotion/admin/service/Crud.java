@@ -1,4 +1,4 @@
-package br.com.findmypromotion.service;
+package br.com.findmypromotion.admin.service;
 
 import java.util.List;
 

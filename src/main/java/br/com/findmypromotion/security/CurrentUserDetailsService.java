@@ -1,8 +1,7 @@
 package br.com.findmypromotion.security;
 
-import br.com.findmypromotion.domain.UserAdmin;
-import br.com.findmypromotion.service.implementation.UserAdminServiceImpl;
-import org.springframework.security.core.userdetails.UserDetails;
+import br.com.findmypromotion.admin.domain.UserAdmin;
+import br.com.findmypromotion.admin.service.implementation.UserAdminServiceImpl;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;

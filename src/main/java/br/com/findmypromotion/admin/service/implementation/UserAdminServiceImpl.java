@@ -1,9 +1,8 @@
-package br.com.findmypromotion.service.implementation;
+package br.com.findmypromotion.admin.service.implementation;
 
-import br.com.findmypromotion.domain.UserAdmin;
-import br.com.findmypromotion.repository.UserAdminRepository;
-import br.com.findmypromotion.service.Crud;
-import groovy.util.logging.Commons;
+import br.com.findmypromotion.admin.domain.UserAdmin;
+import br.com.findmypromotion.admin.repository.UserAdminRepository;
+import br.com.findmypromotion.admin.service.Crud;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;

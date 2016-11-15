@@ -1,6 +1,6 @@
-package br.com.findmypromotion.repository;
+package br.com.findmypromotion.admin.repository;
 
-import br.com.findmypromotion.domain.UserAdmin;
+import br.com.findmypromotion.admin.domain.UserAdmin;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

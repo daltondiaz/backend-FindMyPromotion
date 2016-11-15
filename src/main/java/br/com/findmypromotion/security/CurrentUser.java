@@ -1,10 +1,8 @@
 package br.com.findmypromotion.security;
 
-import br.com.findmypromotion.domain.UserAdmin;
+import br.com.findmypromotion.admin.domain.UserAdmin;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
-
-import java.util.Collection;
 
 /**
  * Created by Dalton on 14/11/2016.

@@ -1,8 +1,8 @@
-package br.com.findmypromotion.controllers;
+package br.com.findmypromotion.admin.controllers;
 
-import br.com.findmypromotion.domain.UserAdmin;
+import br.com.findmypromotion.admin.domain.UserAdmin;
 import br.com.findmypromotion.security.Role;
-import br.com.findmypromotion.service.implementation.UserAdminServiceImpl;
+import br.com.findmypromotion.admin.service.implementation.UserAdminServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;

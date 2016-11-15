@@ -1,4 +1,4 @@
-package br.com.findmypromotion.domain;
+package br.com.findmypromotion.admin.domain;
 
 import br.com.findmypromotion.security.Role;
 import org.springframework.security.core.GrantedAuthority;
