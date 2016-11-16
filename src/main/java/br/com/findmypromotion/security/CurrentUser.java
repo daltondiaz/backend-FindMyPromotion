@@ -1,23 +1,22 @@
 package br.com.findmypromotion.security;
 
-import br.com.findmypromotion.admin.domain.UserAdmin;
+import br.com.findmypromotion.domain.User;
 import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.userdetails.User;
 
 /**
  * Created by Dalton on 14/11/2016.
  */
-public class CurrentUser extends User {
+public class CurrentUser extends org.springframework.security.core.userdetails.User {
 
 
-    private UserAdmin user;
+    private User user;
 
-    public CurrentUser(UserAdmin userAdmin) {
-        super(userAdmin.getEmail(), userAdmin.getPassword(), AuthorityUtils.createAuthorityList(userAdmin.getRole().toString()));
-        this.user = userAdmin;
+    public CurrentUser(User user) {
+        super(user.getEmail(), user.getPassword(), AuthorityUtils.createAuthorityList(user.getRole().toString()));
+        this.user = user;
     }
 
-    public UserAdmin getUser() {
+    public User getUser() {
         return user;
     }
 

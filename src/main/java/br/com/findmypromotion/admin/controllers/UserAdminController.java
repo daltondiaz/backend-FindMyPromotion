@@ -1,6 +1,6 @@
 package br.com.findmypromotion.admin.controllers;
 
-import br.com.findmypromotion.admin.domain.UserAdmin;
+import br.com.findmypromotion.domain.User;
 import br.com.findmypromotion.security.Role;
 import br.com.findmypromotion.admin.service.implementation.UserAdminServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,11 +26,11 @@ public class UserAdminController  {
 
     @RequestMapping(value= "/user/create",method= RequestMethod.GET)
     public ModelAndView getUserCreatePage(){
-        return new ModelAndView("/admin/user_admin/user","user",new UserAdmin());
+        return new ModelAndView("/admin/user_admin/user","user",new User());
     }
 
     @RequestMapping(value = "/user/create", method = RequestMethod.POST)
-    public String handleUserCreateForm  (@Valid @ModelAttribute("user") UserAdmin user, BindingResult bindingResult) {
+    public String handleUserCreateForm  (@Valid @ModelAttribute("user") User user, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "/admin/user_admin/user";
         }

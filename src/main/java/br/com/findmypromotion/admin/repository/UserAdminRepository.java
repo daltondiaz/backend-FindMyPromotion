@@ -1,14 +1,14 @@
 package br.com.findmypromotion.admin.repository;
 
-import br.com.findmypromotion.admin.domain.UserAdmin;
+import br.com.findmypromotion.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
 /**
  * Created by Dalton on 14/11/2016.
  */
-public interface UserAdminRepository extends JpaRepository<UserAdmin,Long> {
+public interface UserAdminRepository extends JpaRepository<User,Long> {
 
-    UserAdmin findUserAdminByEmail(String email);
+    User findUserAdminByEmail(String email);
 
 }

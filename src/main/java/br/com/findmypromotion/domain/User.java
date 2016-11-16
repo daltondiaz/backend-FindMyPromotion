@@ -1,4 +1,4 @@
-package br.com.findmypromotion.admin.domain;
+package br.com.findmypromotion.domain;
 
 import br.com.findmypromotion.security.Role;
 import org.springframework.security.core.GrantedAuthority;
@@ -11,8 +11,8 @@ import java.util.Collection;
  * Created by Dalton on 14/11/2016.
  */
 @Entity
-@Table(name="user_admin")
-public class UserAdmin implements UserDetails {
+@Table(name="person")
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

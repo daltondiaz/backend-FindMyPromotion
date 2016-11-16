@@ -1,6 +1,6 @@
 package br.com.findmypromotion.admin.service.implementation;
 
-import br.com.findmypromotion.admin.domain.UserAdmin;
+import br.com.findmypromotion.domain.User;
 import br.com.findmypromotion.admin.repository.UserAdminRepository;
 import br.com.findmypromotion.admin.service.Crud;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import java.util.List;
  */
 
 @Component
-public class UserAdminServiceImpl implements Crud<UserAdmin> {
+public class UserAdminServiceImpl implements Crud<User> {
 
     @Autowired
     private UserAdminRepository userAdminRepository;
@@ -22,7 +22,7 @@ public class UserAdminServiceImpl implements Crud<UserAdmin> {
     //TODO add Log4J
 
     @Override
-    public UserAdmin getById(long id) {
+    public User getById(long id) {
         try{
             return userAdminRepository.findOne(id);
         }catch (Exception e){
@@ -32,7 +32,7 @@ public class UserAdminServiceImpl implements Crud<UserAdmin> {
     }
 
     @Override
-    public List<UserAdmin> getList() {
+    public List<User> getList() {
         try{
             return userAdminRepository.findAll();
         }catch (Exception e){
@@ -42,7 +42,7 @@ public class UserAdminServiceImpl implements Crud<UserAdmin> {
     }
 
     @Override
-    public void saverOrUpdate(UserAdmin userAdmin) {
+    public void saverOrUpdate(User userAdmin) {
         try {
             userAdmin.setPassword(new BCryptPasswordEncoder().encode(userAdmin.getPassword()));
             userAdminRepository.save(userAdmin);
@@ -51,7 +51,7 @@ public class UserAdminServiceImpl implements Crud<UserAdmin> {
         }
     }
 
-    public UserAdmin findByEmail(String email){
+    public User findByEmail(String email){
         try{
             return userAdminRepository.findUserAdminByEmail(email);
         }catch (Exception e){
