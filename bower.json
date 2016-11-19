@@ -1,0 +1,20 @@
+{
+  "name": "FindMyPromotion",
+  "homepage": "https://github.com/daltondiaz/backend-FindMyPromotion",
+  "authors": [
+    "Dalton Dias <dalton.dias@ymail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
