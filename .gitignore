@@ -1,5 +1,9 @@
 *.iml
 .gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+
 /local.properties
 /.idea/workspace.xml
 /.idea/libraries
@@ -11,3 +15,6 @@
 /.idea
 /src/main/resources/static/bower_components
 FindMyPromotion.iml
+
+
+/bin/
